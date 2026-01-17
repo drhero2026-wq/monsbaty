@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظم المناسبات الهادئ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #f4f7f6; /* رمادي مائل للأخضر فاتح جداً */
+            --card-bg: #ffffff;
+            --primary-sage: #7ba05b; /* أخضر مريمي هادئ */
+            --text-main: #34495e; /* رمادي داكن بدلاً من الأسود الصريح */
+            --accent-color: #d1d8e0;
+            --input-border: #ccd1d9;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .main-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* ظل ناعم جداً */
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary-sage);
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .form-section {
+            display: grid;
+            gap: 25px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--primary-sage);
+        }
+
+        input, select {
+            padding: 14px;
+            border: 1.5px solid var(--accent-color);
+            border-radius: 12px;
+            background-color: #fff;
+            color: var(--text-main);
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-sage);
+            box-shadow: 0 0 0 4px rgba(123, 160, 91, 0.1);
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 16px;
+            background-color: var(--primary-sage);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        button:hover {
+            background-color: #6a8d4e;
+            transform: translateY(-2px);
+        }
+
+        /* تنسيق النتائج */
+        #results-area {
+            margin-top: 40px;
+            display: none;
+            border-top: 2px solid #f1f1f1;
+            padding-top: 30px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1;
